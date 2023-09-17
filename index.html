@@ -54,9 +54,19 @@
               >
             </li>
           </ul>
+          <button
+            class="header-btn js-open-menu"
+            arial-expanded="false"
+            aria-controls="mobile-menu"
+            aria-label="Mobile menu open button"
+          >
+            <svg class="header-btn-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-menu-hamburger"></use>
+            </svg>
+          </button>
         </nav>
         <address class="header-contact">
-          <ul class="header-list list">
+          <ul class="header-list header-contact-list list">
             <li class="header-item">
               <a
                 class="header-link link contact"
@@ -151,29 +161,44 @@
           <ul class="third-container-list list">
             <li class="third-container-item">
               <img
+                srcset="
+                  ./images/about/img-1.jpg    1x,
+                  ./images/about/img-1@2x.jpg 2x
+                "
                 src="./images/about/img-1.jpg"
                 class="third-container-img"
                 alt="Desktop"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="third-container-item">
               <img
+                srcset="
+                  ./images/about/img-2.jpg    1x,
+                  ./images/about/img-2@2x.jpg 2x
+                "
                 src="./images/about/img-2.jpg"
                 class="third-container-img"
                 alt="Mobile"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
             <li class="third-container-item">
               <img
+                srcset="
+                  ./images/about/img-3.jpg    1x,
+                  ./images/about/img-3@2x.jpg 2x
+                "
                 src="./images/about/img-3.jpg"
                 class="third-container-img"
                 alt="Laptop and mobile"
                 width="360"
                 height="300"
+                loading="lazy"
               />
             </li>
           </ul>
@@ -185,14 +210,19 @@
           <ul class="fourth-container-list list">
             <li class="fourth-container-item">
               <img
+                srcset="
+                  ./images/team/img-1.jpg    1x,
+                  ./images/team/img-1@2x.jpg 2x
+                "
                 src="./images/team/img-1.jpg"
                 class="fourth-container-img"
                 alt="Mark Guerrero works as a Product Designer"
                 width="264"
+                loading="lazy"
               />
               <div class="description">
-                <h3 class="item-title name">Mark Guerrero</h3>
-                <p class="specialty text">Product Designer</p>
+                <h3 class="description-title name">Mark Guerrero</h3>
+                <p class="specialty description-text">Product Designer</p>
                 <ul class="social-icons-list list">
                   <li class="social-icons-item">
                     <a
@@ -251,14 +281,19 @@
             </li>
             <li class="fourth-container-item">
               <img
+                srcset="
+                  ./images/team/img-2.jpg    1x,
+                  ./images/team/img-2@2x.jpg 2x
+                "
                 src="./images/team/img-2.jpg"
                 class="fourth-container-img"
                 alt="Tom Ford works as a Frontend Developer"
                 width="264"
+                loading="lazy"
               />
               <div class="description">
-                <h3 class="item-title name">Tom Ford</h3>
-                <p class="specialty text">Frontend Developer</p>
+                <h3 class="description-title name">Tom Ford</h3>
+                <p class="specialty description-text">Frontend Developer</p>
                 <ul class="social-icons-list list">
                   <li class="social-icons-item">
                     <a
@@ -317,14 +352,19 @@
             </li>
             <li class="fourth-container-item">
               <img
+                srcset="
+                  ./images/team/img-3.jpg    1x,
+                  ./images/team/img-3@2x.jpg 2x
+                "
                 src="./images/team/img-3.jpg"
                 class="fourth-container-img"
                 alt="Camila Garcia works as a Marketer"
                 width="264"
+                loading="lazy"
               />
               <div class="description">
-                <h3 class="item-title name">Camila Garcia</h3>
-                <p class="specialty text">Marketing</p>
+                <h3 class="description-title name">Camila Garcia</h3>
+                <p class="specialty description-text">Marketing</p>
                 <ul class="social-icons-list list">
                   <li class="social-icons-item">
                     <a
@@ -383,14 +423,19 @@
             </li>
             <li class="fourth-container-item">
               <img
+                srcset="
+                  ./images/team/img-4.jpg    1x,
+                  ./images/team/img-4@2x.jpg 2x
+                "
                 src="./images/team/img-4.jpg"
                 class="fourth-container-img"
                 alt="Daniel Wilson works as a UI Designer"
                 width="264"
+                loading="lazy"
               />
               <div class="description">
-                <h3 class="item-title name">Daniel Wilson</h3>
-                <p class="specialty text">UI Designer</p>
+                <h3 class="description-title name">Daniel Wilson</h3>
+                <p class="specialty description-text">UI Designer</p>
                 <ul class="social-icons-list list">
                   <li class="social-icons-item">
                     <a
@@ -554,7 +599,7 @@
         </div>
         <div class="footer-container-social-media">
           <p class="social-media-title">Social media</p>
-          <ul class="social-icons-list social-icons-gap list">
+          <ul class="social-icons-list footer-social-icons-gap list">
             <li class="social-icons-item">
               <a
                 class="socials-link footer-socials-link"
@@ -630,6 +675,8 @@
         </div>
       </div>
     </footer>
+
+    <!-- Modal -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-btn" type="button" data-modal-close>
@@ -733,6 +780,128 @@
       </div>
     </div>
 
+    <!-- Mobile menu -->
+    <div class="mobile-backdrop js-menu-container" id="mobile-menu">
+      <div class="mobile-container">
+        <button
+          class="mobile-menu-btn js-close-menu"
+          type="button"
+          aria-label="Mobile menu close button"
+        >
+          <svg class="mobile-menu-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+
+        <ul class="mobile-menu list">
+          <li class="mobile-menu-item">
+            <a
+              href="./index.html"
+              class="mobile-menu-link"
+              rel="noopener noreferrer"
+              >Studio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              href="./portfolio.html"
+              class="mobile-menu-link"
+              rel="noopener noreferrer"
+              >Portfolio</a
+            >
+          </li>
+          <li class="mobile-menu-item">
+            <a href="" class="mobile-menu-link" rel="noopener noreferrer"
+              >Contacts</a
+            >
+          </li>
+        </ul>
+
+        <ul class="list">
+          <li class="mobile-menu-item">
+            <a
+              class="mobile-menu-link link"
+              href="tel:+110001111111"
+              target="_blank"
+              rel="noopener noreferrer"
+              >+11 (000) 111-11-11
+            </a>
+          </li>
+          <li class="mobile-menu-item">
+            <a
+              class="mobile-menu-link email-menu-link link"
+              href="mailto:info@devstudio.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="social-icons-list social-gap list">
+          <li class="social-icons-item">
+            <a
+              class="socials-link"
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item">
+            <a
+              class="socials-link"
+              href="https://twitter.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Twitter icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item">
+            <a
+              class="socials-link"
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="social-icons-item">
+            <a
+              class="socials-link"
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Linkedin icon"
+            >
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <script src="./js/modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
