@@ -260,7 +260,7 @@ textarea:focus-visible {
 
 .mobile-menu-link {
   color: var(--navy-blue-color);
-  font-size: var(--xLarge-size);
+  font-size: 24px;
   font-weight: var(--bold-weight);
   line-height: 1.1;
   letter-spacing: 0.045em;
@@ -372,8 +372,7 @@ textarea:focus-visible {
   left: 50%;
   transform: translateX(-50%) translateY(-50%) scale(1);
 
-  width: 392px;
-  min-height: 584px;
+  width: calc(100% - 30px);
   padding: 72px 24px 24px 24px;
 
   border-radius: 4px;
@@ -423,7 +422,6 @@ textarea:focus-visible {
 }
 
 .modal-caption {
-  min-width: 360px;
   color: var(--navy-blue-color);
   text-align: center;
   font-weight: var(--medium-weight);
@@ -643,7 +641,6 @@ input[type="checkbox"]:checked
   line-height: 1.2;
   letter-spacing: 0.02em;
   margin-bottom: 8px;
-  width: 100%;
 }
 
 .text {
@@ -916,7 +913,6 @@ input[type="checkbox"]:checked
 .social-gap {
   display: flex;
   justify-content: flex-start;
-  gap: 56px;
   margin-bottom: 40px;
   margin-left: 40px;
 }
@@ -1150,7 +1146,6 @@ input[type="checkbox"]:checked
 
   .item-title {
     text-align: left;
-    width: 356px;
   }
 
   .text {
@@ -1181,10 +1176,6 @@ input[type="checkbox"]:checked
     column-gap: 24px;
   }
 
-  .footer-container-subscribe {
-    width: 500px;
-  }
-
   .logo-footer-margin {
     text-align: left;
   }
@@ -1196,10 +1187,6 @@ input[type="checkbox"]:checked
 
   .subscribe-form-input {
     min-width: 264px;
-  }
-
-  .subscribe-form-btn {
-    margin-right: 48px;
   }
 
   .footer-social-icons-gap {
